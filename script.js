@@ -24,8 +24,8 @@ function addToList () {
   list.append(li);
 }
 
-  list.addEventListener("click", (event) => {
-    if(event.target.tagName ==='BUTTON' && event.target.parentNode['data-id']) {
+  list.addEventListener("click", (event) => {  
+    if(event.target.tagName ==='BUTTON' && event.target.parentNode.getAttribute('data-id')) {
 			const parent = event.target.parentNode
   		list.removeChild(parent);
 		}
